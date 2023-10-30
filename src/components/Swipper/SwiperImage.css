@@ -1,0 +1,16 @@
+/* SwiperImage.css */
+
+/* Tạo dots có hình tròn */
+.custom-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ccc; /* Màu mặc định của dots */
+  border-radius: 50%; /* Biến dots thành hình tròn */
+  margin: 0 5px; /* Khoảng cách giữa các dots */
+  cursor: pointer;
+}
+
+/* Chuyển đổi màu của dots khi được chọn */
+.slick-active .custom-dot {
+  background-color: red; /* Màu của dots khi được chọn (màu đỏ) */
+}
