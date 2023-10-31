@@ -1,13 +1,20 @@
 /* SwiperImage.css */
-
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
 /* Tạo dots có hình tròn */
 .custom-dot {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   background-color: #ccc; /* Màu mặc định của dots */
   border-radius: 50%; /* Biến dots thành hình tròn */
   margin: 0 5px; /* Khoảng cách giữa các dots */
   cursor: pointer;
+  position: absolute;
+  bottom: -50px; /* Điều chỉnh vị trí dưới phía bên dưới phần ảnh */
+  transform: translateX(-50%); /* Đưa dots vào giữa theo chiều ngang */
 }
 
 /* Chuyển đổi màu của dots khi được chọn */
@@ -16,11 +23,13 @@
 }
 
 .slide {
-  width: 1392px;
   height: 399px;
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+.banner-panel {
+  width: 1392px;
 }

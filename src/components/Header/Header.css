@@ -60,16 +60,27 @@
   }
 }
 .login-logout {
-  z-index: 3;
-  font-weight: 700;
+  border: 1px solid #1c3967;
+  margin: 0;
   font-size: 14px;
+  font-weight: 600;
+  padding: 3px 15px;
+  background-color: transparent;
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 0 15px;
-  color: #000;
+  line-height: 1.75;
+  min-width: 64px;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    color: #fff;
+    background: #1c3967;
+  }
 }
 .cart-button {
   color: #e10422;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 .cart-panel {
   margin-right: 20px;

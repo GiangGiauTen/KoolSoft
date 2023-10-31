@@ -14,13 +14,19 @@ const images = [
 ];
 function SwiperImage() {
   return (
-    <Carousel autoplay customPaging={i => <div className="custom-dot"></div>}>
-      {images.map((image, index) => (
-        <div key={index} className="slide">
-          <img src={`/slides/${image}`} alt={`Slide ${index + 1}`} />
-        </div>
-      ))}
-    </Carousel>
+    <div className="swiper-container">
+      <Carousel
+        className="banner-panel"
+        autoplay
+        customPaging={i => <div className="custom-dot"></div>}
+        dotPosition="bottom">
+        {images.map((image, index) => (
+          <div key={index} className="slide">
+            <img src={`/slides/${image}`} alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 }
 export default SwiperImage;

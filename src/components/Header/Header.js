@@ -23,11 +23,11 @@ function Header() {
           <Button type="text" className="header-button">
             KÍCH HOẠT
           </Button>
-          <Button type="text" className="cart-button">
+          <a href="" type="text" className="cart-button">
             <ShoppingCartOutlined />
-          </Button>
-          <Button className="login-logout">Đăng Nhập</Button>
-          <Button className="login-logout">Đăng Xuất</Button>
+          </a>
+          <button className="login-logout">Đăng Nhập</button>
+          <button className="login-logout">Đăng Xuất</button>
         </div>
       </div>
     </div>
