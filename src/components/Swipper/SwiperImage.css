@@ -14,3 +14,13 @@
 .slick-active .custom-dot {
   background-color: red; /* Màu của dots khi được chọn (màu đỏ) */
 }
+
+.slide {
+  width: 1392px;
+  height: 399px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
