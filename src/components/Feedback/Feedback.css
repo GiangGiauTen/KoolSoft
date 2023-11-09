@@ -1,0 +1,113 @@
+.custom-feedback {
+  margin: 30px 0;
+  color: #1c3967;
+  font-weight: 600;
+  line-height: 1.167;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.swiper-feedback {
+  padding: 50px 20px 70px !important;
+}
+.feedback-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+}
+
+.swiper-fb-item {
+  position: relative;
+  width: 255px;
+  border-radius: 0 15px 15px 15px;
+  transition: 0.5s;
+  display: inline-block; /* Hiển thị cùng một hàng */
+
+  background: transparent;
+  margin-right: 20px;
+}
+.swiper-fb-item:hover {
+  transition: opacity 0.3s;
+  transform: translateZ(0);
+  transform: scale(1.1);
+  z-index: 10;
+  .panel-image-feedback span img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .tag-study-feedback {
+    color: white;
+    background-color: red;
+  }
+}
+
+.tag-study-feedback {
+  position: absolute;
+  padding: 5px 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #1c3967;
+  background: rgba(192, 210, 235, 0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  top: 15px;
+  z-index: 15;
+  left: 0;
+}
+.panel-image-feedback {
+  padding: 0;
+  width: 255px;
+  height: 400px; /* Tăng chiều cao để mở rộng phần trên */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.panel-image-feedback span {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: 255px;
+  height: 430px;
+  background: none;
+  opacity: 1;
+  position: absolute;
+  inset: 0px;
+}
+.panel-image-feedback span img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 75%;
+  max-height: 75%;
+  object-fit: cover;
+
+  border-radius: 0 15px 15px 15px;
+}
+
+.custom-dot-fb {
+  width: 14px;
+  height: 14px;
+  background-color: #ccc; /* Màu mặc định của dots */
+  border-radius: 50%; /* Biến dots thành hình tròn */
+  margin: 0 5px; /* Khoảng cách giữa các dots */
+  cursor: pointer;
+  position: absolute;
+  bottom: -50px; /* Điều chỉnh vị trí dưới phía bên dưới phần ảnh */
+  transform: translateX(-50%); /* Đưa dots vào giữa theo chiều ngang */
+}
+/* Chuyển đổi màu của dots khi được chọn */
+.slick-active .custom-dot-fb {
+  background-color: red; /* Màu của dots khi được chọn (màu đỏ) */
+}

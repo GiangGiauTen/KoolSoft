@@ -1,0 +1,16 @@
+.system-container {
+  background: linear-gradient(180deg, #fefeff 23.96%, hsla(0, 0%, 100%, 0));
+  filter: drop-shadow(0 6px 15px rgba(192, 210, 235, 0.5));
+  padding: 30px 50px;
+  position: relative;
+  top: -45px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 992px;
+  margin: auto;
+}
+.system-tab {
+  color: red;
+  border-bottom: 2px solid red;
+  position: relative;
+  z-index: 1;
+}

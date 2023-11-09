@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
+  width: 100vw; /* Sử dụng 100vw để làm cho chiều rộng bằng viewport width */
+  overflow: hidden;
+  padding-top: 100px;
 }
 /* Tạo dots có hình tròn */
 .custom-dot {
@@ -23,13 +26,25 @@
 }
 
 .slide {
-  height: 399px;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 .banner-panel {
   width: 1392px;
+}
+.swiper-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+/* Sử dụng media query để điều chỉnh kích thước hình ảnh khi chuyển sang chế độ mobile */
+@media only screen and (max-width: 46.25em) {
+  .slide {
+    max-width: 60vh;
+    height: auto;
+  }
+  .swiper-image {
+    padding: 0 16px;
+  }
 }

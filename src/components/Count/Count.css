@@ -64,7 +64,7 @@
   position: relative;
 }
 
-.count-list-item:hover * {
+.count-list-item:hover {
   color: red;
   transform: translateY(-6px);
   transition: 0.5s;
@@ -83,8 +83,25 @@
     }
   }
 }
+.count-list-item:hover .item-count > * {
+  color: red;
+}
 .count-list {
   display: flex;
   justify-content: space-around;
   margin: 0 180px;
+}
+
+@media only screen and (max-width: 46.25em) {
+  .count-text {
+    font-size: 15px;
+  }
+  .item-count {
+    margin: 0;
+  }
+  .count-list {
+    max-width: 100%; /* Đảm bảo phần tử không vượt quá chiều rộng của màn hình */
+    margin: 0;
+    flex-wrap: wrap;
+  }
 }

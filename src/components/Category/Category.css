@@ -1,0 +1,132 @@
+/* .category-container {
+  margin: 0 16px;
+} */
+.title-block-category {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #1c3967;
+  margin-top: 30px;
+}
+
+.input-search {
+  width: 561px;
+  height: 48px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+
+  outline: none;
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.input-search input,
+.input-search button {
+  height: 48px !important;
+}
+.card-category-item {
+  display: flex;
+  color: rgba(0, 0, 0, 0.87);
+  flex-direction: column;
+  gap: 24px;
+  width: max-content;
+  overflow-y: auto;
+  font-size: 20px;
+  margin: 10px;
+}
+.Card-team {
+  position: relative;
+  display: flex;
+}
+
+.Card-team .team-info-ctn {
+  text-align: left;
+  height: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #1c3967;
+  margin-bottom: 0;
+}
+
+.Card-team .team-info-ctn > div {
+  margin-bottom: 5px;
+}
+
+.Card-team .team-info-ctn,
+.Card-team Button {
+  position: absolute;
+}
+.Card-team title {
+  color: #8c97b5;
+  font-weight: 500;
+  height: 20px;
+  margin-bottom: 0;
+}
+.Card-team Button {
+  bottom: 10px;
+  right: 10px;
+}
+
+.course {
+  display: flex;
+  margin-right: 8px;
+  margin-top: 30px;
+}
+.inf-school {
+  display: block;
+  padding: 15px 8px 8px !important;
+  font-size: 12px;
+  color: #94a6c0;
+  font-weight: 500;
+  bottom: 10px;
+  left: 10px;
+}
+
+.Card-team:hover {
+  background-color: #e10422;
+  transform: translateY(-6px);
+  transition: 0.5s;
+}
+.Card-team:hover * {
+  color: white;
+}
+.Card-team:hover Button {
+  background-color: #e10422;
+}
+
+.card-category {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  max-width: 1470px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 46.25em) {
+  .title-block-category {
+    font-size: 25px;
+  }
+  .decription-block-category {
+    font-size: 12px;
+  }
+  .input-search {
+    width: 90%;
+  }
+  .card-category {
+    width: 100%;
+  }
+
+  .Card-team .ant-image-mask,
+  .Card-team .ant-image-img {
+    width: 50px;
+    height: 50px;
+  }
+}

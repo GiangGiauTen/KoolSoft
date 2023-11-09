@@ -22,7 +22,11 @@ function SwiperImage() {
         dotPosition="bottom">
         {images.map((image, index) => (
           <div key={index} className="slide">
-            <img src={`/slides/${image}`} alt={`Slide ${index + 1}`} />
+            <img
+              src={`/slides/${image}`}
+              className={'swiper-image'}
+              alt={`Slide ${index + 1}`}
+            />
           </div>
         ))}
       </Carousel>

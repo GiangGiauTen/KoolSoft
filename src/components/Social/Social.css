@@ -1,0 +1,91 @@
+.social-container {
+  background-size: cover;
+  height: 80vh;
+  background-position: 50%;
+  background-image: url(https://storage.googleapis.com/onthisinhvien.appspot.com/images/otsvv/social.png);
+  display: flex;
+}
+.soical-box {
+  max-width: 992px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+}
+.social-container .title {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  width: 70%;
+  background: #000;
+  color: #fff;
+  margin: 45px auto auto;
+  border-radius: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.social-container .title span {
+  position: relative;
+  color: #ed1e24;
+  text-decoration: underline;
+}
+.social-container .decription {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+.social-app {
+  display: flex;
+  justify-content: space-around;
+}
+.social-container .item {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(254, 254, 255, 0.9) 17.71%,
+    rgba(254, 254, 255, 0.9) 42.71%,
+    rgba(254, 254, 255, 0.738) 72.92%,
+    rgba(254, 254, 255, 0.585) 100%
+  );
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+}
+.social-container .item .number {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: 500;
+}
+.social-container .item .subcriber {
+  width: 250px;
+  height: 55px;
+  background: #bd0409;
+  position: relative;
+  border-radius: 15px;
+  margin: auto;
+  transition: 0.25s;
+}
+.social-container .item .subcriber .text {
+  position: absolute;
+  background: linear-gradient(180deg, #ed1e24, #ff4045);
+  width: 220px;
+  padding: 10px 15px;
+  margin: auto;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 19px;
+  text-transform: uppercase;
+  z-index: 1;
+}

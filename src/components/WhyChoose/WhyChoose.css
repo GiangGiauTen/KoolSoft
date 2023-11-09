@@ -1,0 +1,52 @@
+.why-choose-container {
+  padding: 30px 0 30px 0;
+}
+.sub-title-why-choose h2 {
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0;
+}
+.sub-title-why-choose h5 {
+  color: red;
+  font-weight: 600;
+  font-size: 30px;
+  margin: unset;
+  text-transform: uppercase;
+}
+.sub-title-why-choose p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.list-item-why-choose {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.item-why-choose {
+  max-width: 33.333333%;
+  width: 301px;
+  padding: 48px 0 0 48px;
+}
+.list-item-why-choose .item-why-choose > div {
+  width: 100px;
+  height: 100px;
+  background: #e91111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+
+  margin: auto;
+}
+.list-item-why-choose .item-why-choose h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 15px 0;
+}
+.list-item-why-choose .item-why-choose span {
+  text-align: justify;
+}
