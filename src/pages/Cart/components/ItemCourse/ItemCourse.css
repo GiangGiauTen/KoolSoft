@@ -1,7 +1,7 @@
 .item-course-wrapper {
   flex-basis: 25%;
   flex-grow: 0;
-  max-width: 25%;
+  max-width: 23%;
   padding: 16px 0 0 16px;
 }
 .item-course {

@@ -136,7 +136,6 @@
   flex-flow: wrap;
   justify-content: start;
   align-content: flex-start;
-  box-sizing: inherit;
 }
 .show-more {
   padding-top: 20px;
