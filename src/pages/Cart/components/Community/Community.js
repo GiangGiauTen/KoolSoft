@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ItemCommunity.css';
+import './Community.css';
 
-function ItemCommunity({ nameCm, numMem, rate }) {
+function Community({ nameCm, numMem, rate }) {
   return (
     <div className={'item-community-wrapper'}>
       <div className={'item-community'}>
@@ -56,9 +56,9 @@ function ItemCommunity({ nameCm, numMem, rate }) {
     </div>
   );
 }
-ItemCommunity.propTypes = {
+Community.propTypes = {
   nameCm: PropTypes.string.isRequired,
   numMem: PropTypes.string.isRequired,
   rate: PropTypes.string.isRequired,
 };
-export default ItemCommunity;
+export default Community;

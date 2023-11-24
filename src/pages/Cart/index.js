@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import ItemCourse from './components/ItemCourse/ItemCourse';
+import Course from './components/Course/Course';
 
 import './Cart.css';
 import { BiChevronDown } from 'react-icons/bi';
 
-import ItemCommunity from './components/ItemCommunity/ItemCommunity';
+import Community from './components/Community/Community';
 
 // import CourseIcon from '/icon/khoa-luyen.svg';
 // import StdIcon from '../../assets/images/icons/hocvien.svg';
@@ -250,7 +250,7 @@ function Cart() {
               </span>
               <div className={'list-course'}>
                 {allCourses.slice(0, coursesToShow).map((course, index) => (
-                  <ItemCourse
+                  <Course
                     key={index}
                     imgSrc={course.imgSrc}
                     courseName={course.courseName}
@@ -275,7 +275,7 @@ function Cart() {
               </span>
               <div className={'list-course'}>
                 {allCourses.slice(0, coursesToShow).map((course, index) => (
-                  <ItemCourse
+                  <Course
                     key={index}
                     imgSrc={course.imgSrc}
                     courseName={course.courseName}
@@ -298,7 +298,7 @@ function Cart() {
               <span class={'name-category'}>MÔN HỌC AEP (40 KHOÁ)</span>
               <div className={'list-course'}>
                 {allCourses.slice(0, coursesToShow).map((course, index) => (
-                  <ItemCourse
+                  <Course
                     key={index}
                     imgSrc={course.imgSrc}
                     courseName={course.courseName}
@@ -366,27 +366,27 @@ function Cart() {
           <div className={'communities'}>
             <h2>Cộng đồng</h2>
             <div className={'list-item-communities'}>
-              <ItemCommunity
+              <Community
                 nameCm="group Góc ôn thi NEU Shares"
                 numMem="30.000"
                 rate=""
               />
-              <ItemCommunity
+              <Community
                 nameCm="FANPAGE ÔN THI SINH VIÊN HL ĐH KINH TẾ QUỐC DÂN"
                 numMem="12.000"
                 rate="65"
               />
-              <ItemCommunity
+              <Community
                 nameCm="group Góc review nhà trọ Bách Kinh Xây"
                 numMem="80.0000"
                 rate="****"
               />
-              <ItemCommunity
+              <Community
                 nameCm="Góc ôn thi AEP - NEU Shares ✅"
                 numMem="3100"
                 rate="****"
               />
-              <ItemCommunity
+              <Community
                 nameCm="Góc tuyển dụng NEU ✅"
                 numMem="9000"
                 rate="****"

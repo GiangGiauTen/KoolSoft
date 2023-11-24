@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BsFillPeopleFill } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 
-import './ItemCourse.css';
+import './Course.css';
 import { AiOutlineClose } from 'react-icons/ai';
 import {
   MdSell,
@@ -11,7 +11,7 @@ import {
 } from 'react-icons/md';
 import { useCart } from '../../../../context/CartContext';
 
-function ItemCourse({ imgSrc, courseName, description, reviewCount, price }) {
+function Course({ imgSrc, courseName, description, reviewCount, price }) {
   const [showModal, setShowModal] = useState(false);
   const { addToCart } = useCart();
   const { cart } = useCart();
@@ -248,7 +248,7 @@ function ItemCourse({ imgSrc, courseName, description, reviewCount, price }) {
   );
 }
 
-ItemCourse.propTypes = {
+Course.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   courseName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -256,4 +256,4 @@ ItemCourse.propTypes = {
   price: PropTypes.string.isRequired,
 };
 
-export default ItemCourse;
+export default Course;
