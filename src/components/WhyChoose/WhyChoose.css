@@ -50,3 +50,16 @@
 .list-item-why-choose .item-why-choose span {
   text-align: justify;
 }
+
+@media only screen and (max-width: 46.25em) {
+  .why-choose-container {
+    padding: 30px 16px;
+  }
+  .list-item-why-choose {
+    flex-wrap: wrap;
+  }
+  .item-why-choose {
+    margin: 10px 90px;
+    padding: 0;
+  }
+}

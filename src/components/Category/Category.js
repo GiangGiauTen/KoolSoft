@@ -1,4 +1,6 @@
+// Category.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Category.css';
 import { AudioOutlined, CodeSandboxOutlined } from '@ant-design/icons';
 import { Card, Button, Image } from 'antd';
@@ -24,7 +26,7 @@ function Category() {
   };
 
   const handleSearch = value => {
-    const normalizedSearchValue = normalizeString(value); // Chuẩn hóa chuỗi tìm kiếm
+    const normalizedSearchValue = normalizeString(value);
     setSearchValue(normalizedSearchValue);
   };
 
@@ -47,7 +49,7 @@ function Category() {
         <Search
           placeholder="Tìm kiếm tên trường"
           onSearch={handleSearch}
-          onChange={e => handleSearch(e.target.value)} // Lọc ngay khi gõ
+          onChange={e => handleSearch(e.target.value)}
           style={{
             width: '100%',
             height: '48px',
@@ -57,48 +59,50 @@ function Category() {
       <div className="card-category">
         {filteredData.map((item, index) => (
           <div key={index} className="card-category-item">
-            <Card
-              style={{
-                width: 280,
-                height: 155,
-                borderRadius: 20,
-                border: '0.5px solid #ccc',
-                borderBottom: '1px solid #000',
-              }}
-              className="Card-team">
-              <Card.Meta
-                avatar={
-                  <Image
-                    alt="team-image"
-                    width={60}
-                    height={60}
-                    src={item.avatar} // Sử dụng avatar từ JSON
-                  />
-                }
-                title={item.title} // Sử dụng title từ JSON
-                description={
-                  <div className="team-info-ctn">{item.description}</div> // Sử dụng description từ JSON
-                }
-              />
-              <div className="inf-school">
-                <div className="course">
-                  <div style={{ marginRight: '8px' }}>
-                    <CodeSandboxOutlined />
+            <Link to={`/cart`}>
+              <Card
+                style={{
+                  width: 280,
+                  height: 155,
+                  borderRadius: 20,
+                  border: '0.5px solid #ccc',
+                  borderBottom: '1px solid #000',
+                }}
+                className="Card-team">
+                <Card.Meta
+                  avatar={
+                    <Image
+                      alt="team-image"
+                      width={60}
+                      height={60}
+                      src={item.avatar}
+                    />
+                  }
+                  title={item.title}
+                  description={
+                    <div className="team-info-ctn">{item.description}</div>
+                  }
+                />
+                <div className="inf-school">
+                  <div className="course">
+                    <div style={{ marginRight: '8px' }}>
+                      <CodeSandboxOutlined />
+                    </div>
+                    <div className="text-dot-1">{item.number}</div>
                   </div>
-                  <div className="text-dot-1">{item.number}</div>
+                  <div>
+                    <Button
+                      style={{
+                        borderRadius: '15px',
+                        border: '1px solid #c3d1e4',
+                        fontSize: '12px',
+                      }}>
+                      Xem Thêm
+                    </Button>
+                  </div>
                 </div>
-                <div>
-                  <Button
-                    style={{
-                      borderRadius: '15px',
-                      border: '1px solid #c3d1e4',
-                      fontSize: '12px',
-                    }}>
-                    Xem Thêm
-                  </Button>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           </div>
         ))}
       </div>

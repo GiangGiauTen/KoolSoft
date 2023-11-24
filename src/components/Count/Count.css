@@ -100,7 +100,7 @@
     margin: 0;
   }
   .count-list {
-    max-width: 100%; /* Đảm bảo phần tử không vượt quá chiều rộng của màn hình */
+    max-width: 100%; 
     margin: 0;
     flex-wrap: wrap;
   }
