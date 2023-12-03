@@ -59,7 +59,7 @@ function Category() {
       <div className="card-category">
         {filteredData.map((item, index) => (
           <div key={index} className="card-category-item">
-            <Link to={`/cart`}>
+            <Link to={`/school`}>
               <Card
                 style={{
                   width: 280,

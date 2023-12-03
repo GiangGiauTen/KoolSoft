@@ -1,12 +1,15 @@
 // Header.js
 import React, { useState } from 'react';
-import { ShoppingCartOutlined } from '@ant-design/icons';
 import './Header.css';
 import { Button, Flex } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
+import { selectCartItems } from '../../Cart/CartSlice';
 import { Menu, Dropdown } from 'antd';
+import { Link } from 'react-router-dom';
 function Header() {
+  const cart = useSelector(selectCartItems);
   const items = [
     {
       key: '1',
@@ -247,9 +250,19 @@ function Header() {
             <Button type="text" className="header-button">
               KÍCH HOẠT
             </Button>
-            <a href="" type="text" className="cart-button">
-              <ShoppingCartOutlined />
-            </a>
+            <Link to={`/cart`}>
+              <a href="" type="text" className="cart-button">
+                <img
+                  className={'header__navbar-item-icon'}
+                  src={'/icons/cart.svg'}
+                  alt="CartIcon"></img>
+                <div
+                  className={'num-course-in-cart'}
+                  style={{ display: cart.length === 0 ? 'none' : 'block' }}>
+                  {cart.length}
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="nav_mobile">
             <Dropdown

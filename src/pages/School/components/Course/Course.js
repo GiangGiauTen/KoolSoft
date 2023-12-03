@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BsFillPeopleFill } from 'react-icons/bs';
 import PropTypes from 'prop-types';
-
 import './Course.css';
 import { AiOutlineClose } from 'react-icons/ai';
 import {
@@ -9,12 +8,12 @@ import {
   MdFormatListNumbered,
   MdOutlineGTranslate,
 } from 'react-icons/md';
-import { useCart } from '../../../../context/CartContext';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, selectCartItems } from '../../../../Cart/CartSlice.js';
 function Course({ imgSrc, courseName, description, reviewCount, price }) {
   const [showModal, setShowModal] = useState(false);
-  const { addToCart } = useCart();
-  const { cart } = useCart();
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
   const openModal = () => {
     setShowModal(true);
   };
@@ -22,11 +21,10 @@ function Course({ imgSrc, courseName, description, reviewCount, price }) {
   const closeModal = () => {
     setShowModal(false);
   };
-  const isInCart = cart.some(item => item.courseName === courseName);
+  const isInCart = cartItems.some(item => item.courseName === courseName);
   const handleAddToCart = () => {
-    addToCart({ imgSrc, courseName, price });
+    dispatch(addToCart({ imgSrc, courseName, price }));
   };
-  console.log(handleAddToCart);
 
   return (
     <div className={'item-course-wrapper'}>
@@ -234,9 +232,13 @@ function Course({ imgSrc, courseName, description, reviewCount, price }) {
               </div>
               <div className={'modal-footer'}>
                 {isInCart ? (
-                  <button className={'btn-add-cart'}>Xem giỏ hàng</button>
+                  <button className={'btn-add-School'}>Xem giỏ hàng</button>
                 ) : (
-                  <button className={'btn-add-cart'}>Thêm vào giỏ hàng</button>
+                  <button
+                    className={'btn-add-School'}
+                    onClick={handleAddToCart}>
+                    Thêm vào giỏ hàng
+                  </button>
                 )}
                 <button className={'btn-buy-now'}>Mua ngay</button>
               </div>

@@ -154,11 +154,27 @@
     background: #1c3967;
   }
 }
-.cart-button {
+/* .cart-button {
   color: #e10422;
   font-size: 2rem;
   display: flex;
   align-items: center;
+} */
+.num-course-in-cart {
+  position: absolute;
+  top: 32px;
+  right: 461px;
+  color: #fff;
+  background: red;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
 }
 .cart-panel {
   margin-right: 20px;

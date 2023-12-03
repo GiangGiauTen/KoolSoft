@@ -299,7 +299,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-.btn-add-cart {
+.btn-add-School {
   border: none;
   width: 50%;
   text-align: center;
@@ -310,7 +310,7 @@ ul {
   font-weight: 600;
   cursor: pointer;
 }
-.btn-add-cart:active {
+.btn-add-School:active {
   background-color: #cfcfcf;
 }
 .btn-buy-now {
@@ -351,7 +351,7 @@ ul {
     flex-basis: 100%;
     max-width: 100%;
   }
-  .btn-add-cart {
+  .btn-add-School {
     font-size: 11px;
     line-height: 19.25px;
   }
