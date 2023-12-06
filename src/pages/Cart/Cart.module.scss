@@ -1,0 +1,231 @@
+* {
+  box-sizing: inherit;
+  font-family: SVN-Poppins !important;
+}
+.path-link-background {
+  margin-bottom: 0;
+  background: #dde6f4;
+  padding: 100px 10px 10px 0;
+  width: 100%;
+}
+.css-1ll7j1d {
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1170px;
+}
+.nav-container {
+  margin: auto !important;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+}
+.css-nhb8h9 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.css-3mf706 {
+  display: flex;
+  user-select: none;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.breadcrumb-item:hover,
+.breadcrumb-last-item {
+  color: red;
+}
+.item-cart-panel {
+  background: #eef1f2;
+}
+.item-cart-container {
+  max-width: 1170px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: flex;
+}
+.item-cart-list {
+  padding: 16px 0 0 16px;
+  max-width: 66.6667%;
+}
+.item-course-in-cart {
+  display: flex;
+  align-items: center;
+}
+.cart-check-box {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.item-course-box {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+}
+.left-course {
+  flex-basis: 33.3333%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 33.3333%;
+}
+.left-course .image {
+  width: 100%;
+  position: relative;
+  padding-bottom: 72%;
+  height: 0;
+  z-index: 1;
+  box-sizing: inherit;
+}
+.left-course .image img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: revert;
+}
+.right-course {
+  display: flex;
+  padding: 10px 10px 5px;
+  flex-basis: 66.6667%;
+  max-width: 66.6667%;
+}
+.inf-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 66.6667%;
+  max-width: 66.6667%;
+}
+.title-course {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: SVN-Poppins !important;
+}
+.rate-course {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.rate-icon {
+  font-size: 14px;
+}
+.short-decription {
+  text-align: justify;
+  font-size: 13px;
+  min-height: 42px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+.cost-real {
+  letter-spacing: 1px;
+}
+.remove-course {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #ddd;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//Pay-Course
+.pay-course-container {
+  padding: 16px 0 0 16px;
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+.pay-course {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+.pay-course .thong-tin-don-hang {
+  font-weight: 600;
+  font-size: 16px;
+}
+.pay-course .item-price.tam-tinh {
+  padding-bottom: 15px;
+}
+.pay-course .item-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.pay-course .item-price.tong-tien {
+  border-bottom: unset;
+}
+
+.pay-course .item-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.btn-thanh-toan {
+  width: 100%;
+  background-color: #ef5761;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+.select-all {
+  float: right;
+  margin-top: 10px;
+}
+.select-all Button {
+  background-color: #ef5761;
+  color: #fff;
+}
