@@ -45,6 +45,7 @@
 }
 .item-cart-panel {
   background: #eef1f2;
+  padding: 20px;
 }
 .item-cart-container {
   max-width: 1170px;
@@ -179,6 +180,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  :hover {
+    color: red;
+  }
 }
 //Pay-Course
 .pay-course-container {
@@ -228,4 +232,51 @@
 .select-all Button {
   background-color: #ef5761;
   color: #fff;
+}
+
+//Empyti Cart
+.cart-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+.item-cart-panel .cart-page .empty-cart-container {
+  text-align: center;
+}
+
+.item-cart-panel .cart-page .empty-cart-container .empty-cart-icon {
+  height: 170px;
+  width: 170px;
+  border: 3px solid;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto 15px;
+}
+.cart-page .empty-cart-container .empty-cart-icon svg {
+  font-size: 5em;
+}
+.css-vubbuv {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+.cart-page .empty-cart-container .empty-cart-div {
+  padding: 5px;
+  border-radius: 15px;
+  background: red;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.cart-page .empty-cart-container .empty-cart-div .empty-cart-button {
+  color: #fff;
+  font-weight: 600;
 }

@@ -9,7 +9,10 @@ import {
   MdOutlineGTranslate,
 } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, selectCartItems } from '../../../../Cart/CartSlice.js';
+import {
+  addToCart,
+  selectCartItems,
+} from '../../../../Redux/Cart/CartSlice.js';
 function Course({ imgSrc, courseName, description, reviewCount, price }) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();

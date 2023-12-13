@@ -5,7 +5,7 @@ import { Button, Flex } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from 'react-redux';
-import { selectCartItems } from '../../Cart/CartSlice';
+import { selectCartItems } from '../../Redux/Cart/CartSlice';
 import { Menu, Dropdown } from 'antd';
 import { Link } from 'react-router-dom';
 function Header() {
