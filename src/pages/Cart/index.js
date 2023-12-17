@@ -5,6 +5,7 @@ import { StarFilled, CloseOutlined } from '@ant-design/icons';
 import { Button, Checkbox } from 'antd';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, selectCartItems } from '../../Redux/Cart/CartSlice.js';
 import {
@@ -22,20 +23,28 @@ function Cart() {
     dispatch(removeFromCart(course));
   };
   const handleCheckboxChange = index => {
-    dispatch(toggleSelectedItems(index));
+    dispatch(toggleSelectedItems({ item: cartItems[index] }));
   };
 
   const handleSelectAll = () => {
     const allIndices = cartItems.map((_, index) => index);
     allIndices.forEach(index => {
-      dispatch(toggleSelectedItems(index));
+      dispatch(toggleSelectedItems({ item: cartItems[index] }));
     });
   };
   const calculateTotalPrice = () => {
-    return payItems.reduce(
-      (total, index) => total + parseFloat(cartItems[index].price),
-      0,
-    );
+    const totalPrice = payItems.reduce((total, selectedItem) => {
+      const selectedItemIndex = cartItems.findIndex(
+        item => item === selectedItem,
+      );
+      // Make sure the selectedItem is found in cartItems
+      if (selectedItemIndex !== -1) {
+        return total + parseFloat(cartItems[selectedItemIndex].price);
+      }
+      return total;
+    }, 0);
+
+    return totalPrice;
   };
 
   return (
@@ -46,7 +55,13 @@ function Cart() {
           <nav className={cx('nav-container')}>
             <ol class={cx('css-nhb8h9')}>
               <li class={cx('MuiBreadcrumbs-li')}>
-                <div class={cx('breadcrumb-item')}>Trang chủ</div>
+                <div
+                  class={cx('breadcrumb-item')}
+                  onClick={() => {
+                    console.log(cartItems);
+                  }}>
+                  Trang chủ
+                </div>
               </li>
               <li aria-hidden="true" class={cx('css-3mf706')}>
                 ›
@@ -92,7 +107,10 @@ function Cart() {
                       <Checkbox
                         className={cx('cart-check-box')}
                         onChange={() => handleCheckboxChange(index)}
-                        checked={payItems.includes(index)}></Checkbox>
+                        checked={payItems.some(
+                          item =>
+                            item.courseName === cartItems[index].courseName,
+                        )}></Checkbox>
                     </div>
                     <div className={cx('item-course-box')}>
                       <div className={cx('left-course')}>
@@ -106,7 +124,11 @@ function Cart() {
                             <div className={cx('title-course')}>
                               {item.courseName}
                             </div>
-                            <div className={cx('rate-course')}>
+                            <div
+                              className={cx('rate-course')}
+                              onClick={() => {
+                                console.log(payItems);
+                              }}>
                               <span>(0)</span>
                               <StarFilled />
                               <StarFilled />
@@ -149,13 +171,11 @@ function Cart() {
                   <strong>Tổng Tiền</strong>
                   <div>{calculateTotalPrice()} ,000VND</div>
                 </div>
-                <Button
-                  className={cx('btn-thanh-toan')}
-                  onClick={() => {
-                    console.log(cartItems);
-                  }}>
-                  THANH TOÁN
-                  <span class={cx('.css-w0pj6f ')}></span>
+                <Button className={cx('btn-thanh-toan')}>
+                  <Link to={`/pay`}>
+                    THANH TOÁN
+                    <span class={cx('.css-w0pj6f ')}></span>
+                  </Link>
                 </Button>
               </div>
               <div className={cx('select-all')}>

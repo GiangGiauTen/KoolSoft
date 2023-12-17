@@ -7,13 +7,18 @@ const paySlice = createSlice({
   },
   reducers: {
     toggleSelectedItems: (state, action) => {
-      const index = action.payload;
-      const selectedIndex = state.selectedItems.indexOf(index);
+      const { item } = action.payload;
 
-      if (selectedIndex === -1) {
-        state.selectedItems.push(index);
+      const selectedItemIndex = state.selectedItems.findIndex(
+        selected => selected.courseName === item.courseName,
+      );
+
+      if (selectedItemIndex === -1) {
+        // If the item is not in the selectedItems array, add it
+        state.selectedItems.push(item);
       } else {
-        state.selectedItems.splice(selectedIndex, 1);
+        // If the item is already in the selectedItems array, remove it
+        state.selectedItems.splice(selectedItemIndex, 1);
       }
     },
   },
